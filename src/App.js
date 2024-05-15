@@ -2,12 +2,13 @@
 import './App.css';
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
-import CampsitesList from "./features/campsites/CampsitesList.js";
+//import CampsitesList from "./features/campsites/CampsitesList.js";
+import CampsitesDirectoryPage from './pages/CampsitesDirectoryPage.js';
 function App() {
   return (
     <div className="App">
       <Header/>
-      <CampsitesList/>
+      <CampsitesDirectoryPage/>
       <Footer/>
     </div>
   );
