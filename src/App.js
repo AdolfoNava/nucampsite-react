@@ -1,12 +1,12 @@
-//import React from 'react';
 import './App.css';
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage.js';
 import ContactPage from './pages/ContactPage.js';
-//import CampsitesList from "./features/campsites/CampsitesList.js";
 import CampsitesDirectoryPage from './pages/CampsitesDirectoryPage.js';
+import CampsiteDetailPage from './pages/CampsiteDetailPage.js';
+import AboutPage from './pages/AboutPage.js';
 function App() {
   return (
     <div className="App">
@@ -15,6 +15,10 @@ function App() {
         <Route path='/' element={<HomePage />} />
         <Route path='contact' element={<ContactPage />} />
         <Route path='directory' element={<CampsitesDirectoryPage />} />
+        <Route path='about' element={<AboutPage/>}/>
+        <Route
+          path='directory/:campsiteId'
+          element={<CampsiteDetailPage />} />
       </Routes>
       <Footer />
     </div>

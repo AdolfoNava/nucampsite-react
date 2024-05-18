@@ -3,13 +3,13 @@ import { Col, Row } from "reactstrap";
 import CampsiteCard from "./CampsiteCard.js";
 import { selectAllCampsites } from "./CampsitesSlice.js";
 
-const CampsitesList = ({setCampsiteId}) => {
+const CampsitesList = () => {
     const campsites = selectAllCampsites();
     return (
-        <Row>
+        <Row className='ms-auto'>
             {campsites.map((campSite) => {
                 return (
-                    <Col md='5' className='m-4' key={campSite.id} onClick={() => setCampsiteId(campSite.id)}>
+                    <Col md='5' className='m-4' key={campSite.id}>
                         <CampsiteCard campsite={campSite} />
                     </Col>
                 );
